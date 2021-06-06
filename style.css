@@ -1,0 +1,662 @@
+video{
+    margin-left:12%;
+    margin-right: auto;
+    margin-top: 5%;
+    width:590px;
+     height:367px
+}
+
+#navv{
+    display: none;
+}
+
+#container{
+    color: rgb(254,229,103);
+    width: 450px;
+    margin-top: -50px;
+    margin-left: 40%;
+}
+
+#right{
+    display: flex;
+    flex-direction: column;
+}
+#playbody{
+    display: flex;
+    flex-direction: row;
+}
+#left{
+height: 670px;
+width: 300px;
+background-color:rgb(202, 199, 185);
+margin-top: -60px;
+
+}
+#container h1{
+    text-align: center;
+}
+
+ ::before{
+    content: "";
+    width: 15%;
+    height: 30%;
+    background-color: burlywood;
+    opacity: 0.7;
+    margin-left: 22.2%;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    bottom: 0%;
+    right: 0%;
+    border-radius: 500% 0% 0% 0%;
+     transform: rotate(180deg);
+}
+
+ ::after{
+    content: "";
+    width: 35%;
+    height: 150%;
+    background-color:rgba(255, 255, 255, 0.021);
+    opacity: 0.7;
+    z-index: -0.2;
+    position: absolute;
+    transform: rotate(180deg);
+    margin-left: auto; 
+    margin-right: -10px;
+    margin-top: 34%;
+    top: 0%;
+    left: 0%;
+    bottom: 0%;
+    right: 0%;
+    border-radius: 0 0 5000%  0%;
+}  
+
+
+#videoContainer #controls .ProgressContainer {
+    color: #fff;
+    width: calc(100% - 100px);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+  }
+  #videoContainer #controls .ProgressContainer .progressBar {
+    width: 100%;
+    height: 8px;
+    background: #39a072;
+    border-radius: 20px;
+    cursor: pointer;
+    overflow: hidden;
+  }
+  #videoContainer #controls .ProgressContainer .progressBar:hover + .time {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  #videoContainer #controls #ProgressContainer #progressBar #progress {
+    width: 0%;
+    height: 100%;
+    background: #fff;
+    border-radius: 20px;
+  }
+  #videoContainer #controls #ProgressContainer .timer {
+    margin: 0 10px;
+    font-family: Arial, sans-serif;
+    font-weight: 300;
+    font-size: 12px;
+    font-weight: 300;
+    color: #2c7a57;
+    letter-spacing: 1px;
+  }
+  #videoContainer #controls #ProgressContainer #time {
+    width: 80px;
+    height: 25px;
+    background: #2c7a57;
+    position: absolute;
+    top: -20px;
+    left: 0;
+    border-radius: 5px;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    line-height: 25px;
+    font-size: 12px;
+    letter-spacing: 1px;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: transform 0.3s, opacity 0.3s;
+  }
+  #videoContainer #controls #ProgressContainer #time::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 25px;
+    left: 33px;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #2c7a57;
+  }
+
+#videoCon{
+    height: 50px;
+    width: 900px;
+    background-color: rgb(27,33,35);
+    margin-right: auto;
+    margin-left: 10%;
+    margin-top: 40px;
+    border-radius: 20px;
+    display: none;
+    /* background-image: url("img/Screenshot_20210523-004236_Behance.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; */
+}
+
+#bodyy{
+    /* background-image: url("img/20210522_230917.jpg"); */
+    /* background-repeat: no-repeat; */
+    background-color: rgb(27,31,34);
+     background-size: cover; 
+    padding-top: 50px;
+    /* height: 1257px; */
+    width: 1360px;
+    color: beige;
+    
+}
+
+table{
+margin-left: auto;
+margin-right: auto;
+margin-top: 50px;
+margin-bottom: 50px;
+}
+
+
+
+td{
+    cursor: pointer;
+    height:40px;
+    width: 550px;
+    text-align: center;
+    font-size: small;
+    font-weight: bold;
+    background-color: rgb(46, 51, 54);
+    color: rgb(254,229,103);
+}
+.hovertable tr :hover{
+    background-color: bisque; 
+    color: rgb(27,31,34);
+ }
+
+#addviddiv{
+    
+   margin-top: 20%;
+   margin-left: 29%;
+    height: 100px;
+    width: 100px;
+    border-radius: 1000px;
+    background-color: rgb(254,229,103);
+    padding: 50px;
+}
+
+#addviddivv{
+    margin-left: 160%;
+   margin-top: 50%;
+    height: 200px;
+    width: 200px;
+    border-radius: 1000px;
+    background-color: rgb(254,229,103);
+    padding: 50px;
+}
+#instruction1{
+    margin-left: 145%;
+    margin-top: 10px;
+    width: 100%;
+}
+
+
+#cross{
+    width: 5px;
+    height: 50px;
+    background-color: rgb(27,33,35);
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -47px;
+ 
+}
+
+#cross2{
+    margin-top: 500%;
+    width: 5px;
+    height: 45px;
+    background-color: rgb(27,33,35);
+    cursor: pointer;
+    transform: rotate(90deg);
+}
+
+
+#crossbig{
+    width: 5px;
+    height: 100px;
+    background-color: rgb(27,33,35);
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: -20px;
+ 
+}
+
+#cross2big{
+    margin-top: 500%;
+    width: 5px;
+    height: 85px;
+    background-color: rgb(27,33,35);
+    cursor: pointer;
+    transform: rotate(90deg);
+}
+
+header{
+    margin-left: 35%;
+    margin-right: auto;
+}
+
+#volume{
+    display: flex;
+    flex-direction: row;
+}
+
+#volumeImg{
+    display: block;
+    margin-left: 49%;
+    margin-top: 27px;
+    color: red;
+    cursor: pointer;
+    position: absolute;
+}
+
+#scaleup{
+    margin-left: 52%;
+    margin-top:25px;
+    font-size: small;
+    cursor: pointer;
+    color:wheat;
+    position: absolute;
+}
+
+
+
+
+#controldiv{
+    background-color: black;
+    color: blanchedalmond;
+    display: flex;
+    flex-direction: row;
+    height: 37px;
+}
+
+#play{
+    float: left;
+    margin-left: 10px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+#pause{
+    cursor: pointer;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+#ProgressContainer{
+    margin-left: 20px;
+   display: flex;
+   flex-direction: row;
+    margin-top: 10px;
+}
+#timerIntialTime{
+   font-size: smaller;
+   margin-left: 10px;
+   margin-top: 10px;
+   
+}
+
+#time{
+    font-size: smaller;
+    font-family: bold;
+    margin-left: 40%;
+}
+#timerFullTime{
+ 
+    margin-top: -18px;
+    font-size: smaller;
+     margin-left: 3590%; 
+  
+
+}
+
+#progressbar{
+    background-color: grey;
+    width: 43.4%;
+    margin-top: -13px;
+    margin-left: 5%;
+    height: 10px;
+    cursor: pointer;
+    position: absolute
+}
+
+#progress{
+    height: 10px;
+    width: 0px;
+    background-image: linear-gradient(
+        to right,
+        #ff8a00, yellow
+      );
+      border-radius: 3px;
+      position: relative;
+      transition: width 1s linear;
+    }
+
+
+  progress[aria-valuenow] {
+    appearance: none;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0,.25) inset;
+    color: dodgerblue;
+    display: inline;
+    height: 15px;
+    order: 1;
+    position: relative;
+    width: 100%;
+  }
+  
+  /* WebKit styles
+  progress[value]::-webkit-progress-bar {
+    background-color: whiteSmoke;
+    border-radius: 3px;
+    transition: width 1s linear;
+  }
+  
+  progress[value]::-webkit-progress-value {
+    background-image: linear-gradient(
+      to right,
+      #ff8a00, #e52e71
+    );
+    border-radius: 3px;
+    position: relative;
+    transition: width 1s linear;
+  } */
+  
+
+
+#intensity{
+    height: 100px;
+    width: 50px;
+    /* background-color:black; */
+     margin-left: auto;
+    margin-right: 120px;
+    margin-top: 10px;
+    cursor: pointer;
+    transform: rotate(270deg);
+  }
+
+  #volumeNo{
+      margin-top: -105px;
+      color: black;
+      margin-left: 12px;
+  }
+#intensityBar{
+    height: 100px;
+    width:40px;
+    background-color: rgb(238,237,239);
+    margin-left: 53%;
+  
+    margin-top: -100px;
+    display: none;
+    cursor: pointer;
+    position: absolute;
+}
+
+
+@media only screen and (max-width: 600px) {
+    #progressbar{
+        background-color: grey;
+        width: 30%;
+        margin-top: -13px;
+        margin-left: 4%;
+        height: 10px;
+        cursor: pointer;
+        position: absolute
+    }
+
+    #bodyy{
+        /* background-image: url("img/20210522_230917.jpg"); */
+        /* background-repeat: no-repeat; */
+        background-color: rgb(27,31,34);
+         background-size: cover; 
+        padding-top: 50px;
+        /* height: 1257px; */
+        width: 400px;
+        color: beige;
+        
+    }
+    #instruction1{
+        margin-left: 100px;
+        margin-top: 10px;
+        width: 100px;
+    }
+
+    #volumeImg{
+        margin-left: 3750%;
+        margin-top: 12px;
+        position: absolute;
+        cursor: pointer;
+    }
+    #scaleup{
+        margin-left: 2090%;
+      margin-top: 14px;
+        font-size: small;
+        cursor: pointer;
+        color:wheat
+    }
+
+    #navv{
+        display: block;
+        margin-top: -70px;
+    }
+
+    #left{
+        display: none;
+        margin-top: 30px;
+        width: 200px;
+        margin-left: 50px;
+        background-color: rgba(166, 187, 71, 0.891);
+        box-shadow: 5px 5px 5px rgb(193, 196, 25); ;
+    }
+
+    #right{
+        display: block;
+        flex-direction: column;
+    }
+    
+    #playbody{
+        width: 400px;
+        height: 700px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #addviddiv{
+        margin-left: 20%;
+        width: 30px;
+        height: 30px;
+       
+    }
+
+    #addviddivv{
+    
+        width: 100px;
+        height: 100px;
+        margin-top: 40px;
+        margin-left: 25%;
+    }
+
+    #buttonn{
+        margin-top: 30px;
+        margin-left: -15px;
+    }
+ 
+    
+    #cross{
+margin-top: 23px;
+    }   
+    #cross2{
+        margin-top: -45px;
+    }  
+    #crossbig{
+        width: 5px;
+        height: 50px;
+        background-color: rgb(27,33,35);
+        cursor: pointer;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: -47px;
+     
+    }
+    
+    #cross2big{
+        margin-top: 500%;
+        width: 5px;
+        height: 45px;
+        background-color: rgb(27,33,35);
+        cursor: pointer;
+        transform: rotate(90deg);
+    }
+  
+
+     ::before{
+   display: none;
+}
+
+ ::after{
+     display:none;
+}  
+    
+    
+    #bar{
+        background-color: rebeccapurple;
+        width: 1%;
+        height: 2px;
+        position: absolute;
+    }
+    
+    #controldiv{
+        background-color: black;
+        color: blanchedalmond;
+        display: flex;
+        flex-direction: row;
+        height: 17px;
+        margin-top: -27px;
+    }
+    
+    #play{
+        float: left;
+        margin-left: 4px;
+        margin-top: 4px;
+        cursor: pointer;
+        font-size: xx-small;
+    }
+
+
+    #pause{
+        margin-left: 4px;
+        margin-top: -14px;
+        cursor: pointer;
+        font-size: xx-small;
+    }
+    #ProgressContainer{
+        margin-left: 20px;
+       display: flex;
+       flex-direction: row;
+        margin-top: 10px;
+    }
+    #timerIntialTime{
+       font-size: xx-small;
+       margin-left: 5px;
+       margin-top: 2px;
+       color: white;
+    }
+
+    
+  
+    #time{
+        font-size: xx-small;
+        font-family: bold;
+        margin-left: 40%;
+    }
+    #timerFullTime{
+        font-size: xx-small;
+        margin-top: -12px;
+      
+        z-index: -1;
+        font-size: xx-small;
+         margin-left: 760%; 
+      color: white;
+    
+    }
+    
+    #progressbar{
+        background-color: grey;
+        width: 45%;
+        margin-top: -7.9px;
+        margin-left: 9%;
+        height: 5px;
+        cursor: pointer;
+        
+    }
+    
+    #intensity{
+        height: 100px;
+        width: 50px;
+        /* background-color:black; */
+         margin-left: auto;
+        margin-right: 120px;
+        margin-top: 10px;
+        cursor: pointer;
+        transform: rotate(270deg);
+      }
+    
+      #volumeNo{
+          margin-top: -105px;
+          color: black;
+          margin-left: 12px;
+      }
+    #intensityBar{
+        height: 100px;
+        width:40px;
+        background-color: rgb(238,237,239);
+        margin-left: auto;
+        margin-right: 22px;
+        margin-top: -100px;
+        display: none;
+        cursor: pointer;
+    }
+    
+
+    #videoCon{
+        height: 200px;
+        width: 250px;
+        background-color: lightslategrey;
+        margin-left:20px;
+        margin-right: auto;
+        margin-top: 10%;
+        border-radius: 5px;
+    }
+
+    video{
+       
+        margin-left:4%;
+        width:230px;
+         height:227px
+    }
+  }
