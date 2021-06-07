@@ -474,7 +474,7 @@ header{
         background-color:rgb(27,31,34);
         color: rgb(254,229,103);
         border-radius: 5px;
-        box-shadow: 3px 3px 3px 1px rgb(254,229,103);
+        box-shadow: 1px 3px 3px 1px rgb(254,229,103);
     }
 
     #right{

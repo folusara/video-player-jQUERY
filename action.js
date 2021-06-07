@@ -151,7 +151,7 @@ function progressLoop() {
     })
    
  };
-
+ var videoArray=[]
 
 $("#scaleup").click(function () {
   videoo.requestFullscreen()
@@ -188,7 +188,7 @@ function setVolume() {
   console.log(volumee)
 }
 
-let videoArray=[]
+
 
 
 
@@ -198,6 +198,7 @@ function addTitle() {
     return
   }
   addVideo = document.getElementById("addvid").files[0];
+  console.log(videoArray);
   videoArray.push(addVideo);
  console.log(videoArray)
 tbodyy.innerHTML="";
@@ -227,15 +228,17 @@ function openFile() {
 };
 
 function AddVideo() {
-    for (let index = 0; index < videoArray.length; index++) {    
-      console.log();
+ 
+    for (let index = 0; index < videoArray.length; index++) { 
+
+      console.log(videoArray);
       tbodyy.innerHTML+= ` 
        <tr>
         <td onClick="playVideo(${index})"> ${videoArray[index].name}</td>   
-       
+        <td><button onClick="deletee(${index})" class="fa fa-dustbin btn btn-light"> Delete Video</button></td>
         </tr>
       `  
-        // <td><button onClick="deletee(${index})" class="fa fa-dustbin btn btn-light"> Delete Video</button></td>
+        // 
    }
  }
 
@@ -261,13 +264,16 @@ function AddVideo() {
     }
     
         
-  //    function saveTodo() {
-  //     localStorage.setItem("todos",JSON.stringify(videoArray))
-  //   }
-  //  function getTodo() {
-  //      videoArray=JSON.parse(localStorage.getItem("todos"));
-  //      AddVideo()
-  //  }
+     function saveTodo() {
+       localStorage.setItem("todos",JSON.stringify(videoArray))
+     }
+     
+    function getTodo() {
+        videoArray=JSON.parse(localStorage.getItem("todos"));
+        AddVideo()
+        console.log();
+    }
+    getTodo()
 
    
  
