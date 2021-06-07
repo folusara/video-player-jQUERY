@@ -28,9 +28,10 @@ video{
 #left{
 height: 670px;
 width: 300px;
-background-color:rgb(202, 199, 185);
+background-color:rgb(27,31,34);
+color: rgb(254,229,103);
 margin-top: -60px;
-
+box-shadow: 3px 3px 3px rgb(254,229,103);
 }
 #container h1{
     text-align: center;
@@ -470,8 +471,10 @@ header{
         margin-top: 30px;
         width: 200px;
         margin-left: 50px;
-        background-color: rgba(166, 187, 71, 0.891);
-        box-shadow: 5px 5px 5px rgb(193, 196, 25); ;
+        background-color:rgb(27,31,34);
+        color: rgb(254,229,103);
+        border-radius: 5px;
+        box-shadow: 3px 3px 3px 1px rgb(254,229,103);
     }
 
     #right{
@@ -480,7 +483,7 @@ header{
     }
     
     #playbody{
-        width: 400px;
+        width: 360px;
         height: 700px;
         display: flex;
         flex-direction: column;
