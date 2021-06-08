@@ -265,13 +265,14 @@ function AddVideo() {
     
         
      function saveTodo() {
-       localStorage.setItem("todos",JSON.stringify(videoArray))
+       localStorage.setItem("todos",(videoArray))
+       console.log(videoArray);
      }
      
     function getTodo() {
         videoArray=JSON.parse(localStorage.getItem("todos"));
         AddVideo()
-        console.log();
+       console.log(videoArray);
     }
     getTodo()
 
