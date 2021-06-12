@@ -237,8 +237,7 @@ function AddVideo() {
         <td onClick="playVideo(${index})"> ${videoArray[index].name}</td>   
         <td><button onClick="deletee(${index})" class="fa fa-dustbin btn btn-light"> Delete Video</button></td>
         </tr>
-      `  
-        // 
+      `   
    }
  }
 
@@ -252,6 +251,7 @@ function AddVideo() {
     videooutput.src = dataURL;
     console.log(dataURL)
   };
+  
   reader.readAsDataURL(videoArray[index]);
  }
 
@@ -265,16 +265,18 @@ function AddVideo() {
     
         
      function saveTodo() {
-       localStorage.setItem("todos",(videoArray))
+      //  localStorage.setItem("todos",(videoArray))
+      alert("onunload")
        console.log(videoArray);
      }
      
     function getTodo() {
-        videoArray=JSON.parse(localStorage.getItem("todos"));
-        AddVideo()
+        // videoArray=JSON.parse(localStorage.getItem("todos"));
+        // AddVideo()
+        alert("onload")
        console.log(videoArray);
     }
-    getTodo()
+    // getTodo()
 
    
  

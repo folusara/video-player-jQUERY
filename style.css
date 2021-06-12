@@ -663,3 +663,14 @@ margin-top: 23px;
          height:227px
     }
   }
+
+
+  @media only screen and (max-width: 1300px) {
+  ::before{
+    display: none;
+ }
+ 
+  ::after{
+      display:none;
+ }  
+}
