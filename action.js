@@ -132,7 +132,7 @@ const timer = document.getElementById("timer");
 function progressLoop() {
    setInterval(function () {
    
-      progress.value = Math.round((videoo.currentTime/videoo.duration) * 100);
+      progressValue = Math.round((videoo.currentTime/videoo.duration) * 100);
       var second = Math.round(videoo.currentTime)
       var minute  = Math.floor(second / 60);
     
@@ -151,6 +151,8 @@ function progressLoop() {
     })
    
  };
+
+ 
  var videoArray=[]
 
 $("#scaleup").click(function () {
@@ -265,18 +267,18 @@ function AddVideo() {
     
         
      function saveTodo() {
-      //  localStorage.setItem("todos",(videoArray))
+        localStorage.setItem("todos",(videoArray))
       alert("onunload")
        console.log(videoArray);
      }
      
     function getTodo() {
-        // videoArray=JSON.parse(localStorage.getItem("todos"));
-        // AddVideo()
+         videoArray=JSON.parse(localStorage.getItem("todos"));
+         AddVideo()
         alert("onload")
        console.log(videoArray);
     }
-    // getTodo()
+   
 
    
  

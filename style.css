@@ -28,7 +28,7 @@ video{
 #left{
 height: 670px;
 width: 300px;
-background-color:rgb(27,31,34);
+background-color:rgb(57,68,87);
 color: rgb(254,229,103);
 margin-top: -60px;
 box-shadow: 3px 3px 3px rgb(254,229,103);
@@ -157,7 +157,7 @@ box-shadow: 3px 3px 3px rgb(254,229,103);
 #bodyy{
     /* background-image: url("img/20210522_230917.jpg"); */
     /* background-repeat: no-repeat; */
-    background-color: rgb(27,31,34);
+    background-color: rgb(57,68,87);
      background-size: cover; 
     padding-top: 50px;
     /* height: 1257px; */
@@ -269,8 +269,8 @@ header{
 }
 
 #volumeImg{
-    display: block;
-    margin-left: 49%;
+    /* display: block; */
+    margin-left: 5%;
     margin-top: 27px;
     color: red;
     cursor: pointer;
@@ -433,7 +433,7 @@ header{
     #bodyy{
         /* background-image: url("img/20210522_230917.jpg"); */
         /* background-repeat: no-repeat; */
-        background-color: rgb(27,31,34);
+        background-color: rgb(57,68,87);
          background-size: cover; 
         padding-top: 50px;
         /* height: 1257px; */
@@ -471,7 +471,7 @@ header{
         margin-top: 30px;
         width: 200px;
         margin-left: 50px;
-        background-color:rgb(27,31,34);
+        background-color:rgb(57,68,87);
         color: rgb(254,229,103);
         border-radius: 5px;
         box-shadow: 1px 3px 3px 1px rgb(254,229,103);
