@@ -9,7 +9,7 @@ $(document).ready(function (){
   vidDuration    = $('#fullTime'),
   timeState      = $('#time')
    
-$("#pause").hide()
+ $("#pause").hide()
 $('#videoContainer').click(function () {
   $("#videoo").hide()
 })
@@ -152,7 +152,7 @@ function progressLoop() {
    
  };
 
- 
+
  var videoArray=[]
 
 $("#scaleup").click(function () {
@@ -167,10 +167,8 @@ $("#pause").click(function () {
 })
 
 
-$("#volumeImg").toggle(function () {
+$("#volumeImg").click(function () {
   $("#intensityBar").fadeIn(1000)
-},function () {
-  $("#intensityBar").fadeOut(1000)
 })
 
 function disappear() {
@@ -266,18 +264,18 @@ function AddVideo() {
     }
     
         
-     function saveTodo() {
-        localStorage.setItem("todos",(videoArray))
-      alert("onunload")
-       console.log(videoArray);
-     }
+    //  function saveTodo() {
+    //     localStorage.setItem("todos",(videoArray))
+    //   alert("onunload")
+    //    console.log(videoArray);
+    //  }
      
-    function getTodo() {
-         videoArray=JSON.parse(localStorage.getItem("todos"));
-         AddVideo()
-        alert("onload")
-       console.log(videoArray);
-    }
+    // function getTodo() {
+    //      videoArray=JSON.parse(localStorage.getItem("todos"));
+    //      AddVideo()
+    //     alert("onload")
+    //    console.log(videoArray);
+    // }
    
 
    

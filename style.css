@@ -270,16 +270,16 @@ header{
 
 #volumeImg{
     /* display: block; */
-    margin-left: 5%;
-    margin-top: 27px;
+    margin-left: 53%;
+    margin-top: -23px;
     color: red;
     cursor: pointer;
     position: absolute;
 }
 
 #scaleup{
-    margin-left: 52%;
-    margin-top:25px;
+    margin-left: 56%;
+    margin-top:-23px;
     font-size: small;
     cursor: pointer;
     color:wheat;
@@ -298,12 +298,14 @@ header{
 }
 
 #play{
-    float: left;
+   font-size: xx-small;
     margin-left: 10px;
     margin-top: 5px;
     cursor: pointer;
 }
+
 #pause{
+    font-size: xx-small;
     cursor: pointer;
     margin-left: 10px;
     margin-top: 5px;
@@ -370,26 +372,6 @@ header{
     position: relative;
     width: 100%;
   }
-  
-  /* WebKit styles
-  progress[value]::-webkit-progress-bar {
-    background-color: whiteSmoke;
-    border-radius: 3px;
-    transition: width 1s linear;
-  }
-  
-  progress[value]::-webkit-progress-value {
-    background-image: linear-gradient(
-      to right,
-      #ff8a00, #e52e71
-    );
-    border-radius: 3px;
-    position: relative;
-    transition: width 1s linear;
-  } */
-  
-
-
 #intensity{
     height: 100px;
     width: 50px;
@@ -409,13 +391,20 @@ header{
 #intensityBar{
     height: 100px;
     width:40px;
-    background-color: rgb(238,237,239);
+    background-color: teal;
     margin-left: 53%;
-  
-    margin-top: -100px;
+    margin-top: -140px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
     display: none;
     cursor: pointer;
     position: absolute;
+}
+#intensityBar > ::before{
+    display: none;
+}
+#intensityBar > ::after{
+    display: none;
 }
 
 
@@ -431,8 +420,7 @@ header{
     }
 
     #bodyy{
-        /* background-image: url("img/20210522_230917.jpg"); */
-        /* background-repeat: no-repeat; */
+    
         background-color: rgb(57,68,87);
          background-size: cover; 
         padding-top: 50px;
