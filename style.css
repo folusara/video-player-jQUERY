@@ -270,24 +270,21 @@ header{
 
 #volumeImg{
     /* display: block; */
-    margin-left: 53%;
-    margin-top: -23px;
-    color: red;
+    margin-left: 57.5%;
+    margin-top: -10px;
+    color: wheat;
     cursor: pointer;
     position: absolute;
 }
 
 #scaleup{
-    margin-left: 56%;
-    margin-top:-23px;
+    margin-left: 59%;
+    margin-top:-11px;
     font-size: small;
     cursor: pointer;
     color:wheat;
     position: absolute;
 }
-
-
-
 
 #controldiv{
     background-color: black;
@@ -329,11 +326,11 @@ header{
     margin-left: 40%;
 }
 #timerFullTime{
- 
-    margin-top: -18px;
+    margin-top: 10px;
     font-size: smaller;
-     margin-left: 3590%; 
-  
+    padding-right: 20px;
+     margin-left: 68%; 
+  color: wheat;
 
 }
 
@@ -341,7 +338,7 @@ header{
     background-color: grey;
     width: 43.4%;
     margin-top: -13px;
-    margin-left: 5%;
+    margin-left: 4.5%;
     height: 10px;
     cursor: pointer;
     position: absolute
