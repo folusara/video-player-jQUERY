@@ -270,7 +270,7 @@ header{
 
 #volumeImg{
     /* display: block; */
-    margin-left: 57.5%;
+    margin-left: 56.5%;
     margin-top: -10px;
     color: wheat;
     cursor: pointer;
@@ -278,7 +278,7 @@ header{
 }
 
 #scaleup{
-    margin-left: 59%;
+    margin-left: 58.5%;
     margin-top:-11px;
     font-size: small;
     cursor: pointer;
@@ -312,6 +312,7 @@ header{
    display: flex;
    flex-direction: row;
     margin-top: 10px;
+    border-radius: 15px;
 }
 #timerIntialTime{
    font-size: smaller;
@@ -341,20 +342,32 @@ header{
     margin-left: 4.5%;
     height: 10px;
     cursor: pointer;
-    position: absolute
+    position: absolute;
+    border-radius: 5px;
 }
 
-#progress{
+
+ #progress{
     height: 10px;
     width: 0px;
+    border-radius: 3px;
+    position: relative; 
     background-image: linear-gradient(
         to right,
         #ff8a00, yellow
       );
-    border-radius: 3px;
-    position: relative;
-    transition: width 1s linear;
+      /* transition: progressMove  width 1s linear; */
+       animation: progressMove 5s linear infinite; 
+} 
+
+/* @keyframes progressMove {
+    0%{
+        width: 0%;
     }
+    100%{
+        width: 100%;
+    }
+} */
 
  
 progress[value]::-webkit-progress-value {

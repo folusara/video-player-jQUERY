@@ -77,18 +77,27 @@ setInterval(function () {
   let minute = parseInt((videoo.duration % 3600) / 60);
   let hour = parseInt((videoo.duration) / 3600);
 
-  if (minute > 0) {
-    second = minute * 59;
- }
-   if (minute>10) {
+//   if (minute > 0) {
+//     second -= minute * 60;
+//  }
+   if (minute<10) {
        minute = "0" + minute;
    }
-  if (second<10) {
+ 
+  if (second < 10) {
       second = "0" + second;
   }
-  if (hour>10) {
-    hour = "0" + hour;
+  if (second == 60) {
+    second = "0" + 0;
+    minute++
+    minute = "0" + minute;
 }
+if (minute == 60) {
+  minute = "0" + 0;
+  hour++
+  hour = "0" + minute;
+}
+
  
   let videoDuration=`${hour}:${minute}:${second}`
   
@@ -135,19 +144,30 @@ const timer = document.getElementById("timer");
 function progressLoop() {
    setInterval(function () {
    
-     let progressValue = Math.round((videoo.currentTime/videoo.duration) * 100);
-      var second = Math.round(videoo.currentTime)
-      var minute  = Math.floor(second / 60);
+    //  let progressValue = Math.round((videoo.currentTime/videoo.duration) * 100);
+    //   var second = Math.round(videoo.currentTime)
+    //   var minute  = Math.floor(second / 60);
     
-       if (minute > 0) {
-         second -= minute * 60;
-      }
-       if (second.toString().length === 1) {
-           second = "0" + second;
-        }
-        if (minute.toString().length === 1) {
-            minute = "0" + minute;
-        }
+    //    if (minute > 0) {
+    //      second -= minute * 60;
+    //   }
+    //    if (second.toString().length === 1) {
+    //        second = "0" + second;
+    //     }
+    //     if (minute.toString().length === 1) {
+    //         minute = "0" + minute;
+    //     }
+
+ $total_width=$("#progressbar_wrapper").width();
+ $width_inc=$total_width/10;
+ if($("#progressbar").width()<$total_width)
+ {
+  $width=$("#progressbar").width()+$width_inc;
+  $("#progressbar").animate({width:''+$width+''},300);
+ }
+
+
+
        let videoPresentTime=`${minute}:${second}`
       document.getElementById("timer").innerHTML= videoPresentTime; 
       document.getElementById("timerIntialTime").innerHTML= videoPresentTime; 
@@ -155,6 +175,11 @@ function progressLoop() {
     })
    
  };
+ 
+ function reset_progressbar()
+{
+ $("#progress").animate({width:'0px'},300);
+}
 
 
  var videoArray=[]
