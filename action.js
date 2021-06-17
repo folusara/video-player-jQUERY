@@ -19,9 +19,7 @@ $("#addviddiv").click(function () {
 $("#addviddivv").click(function () {
   $("#addvidd").click()
 })
-// $("#addvid").change(function () {
-//   console.log($("#addvid")[0].files[0])
-// })
+
 
 
 
@@ -66,8 +64,7 @@ $("#progressbar").click(function () {
 });
 
 function updateplayer() {
-  // let percentage = (videoo.currentTime / videoo.duration) * 100;
-  // $("#progress").css({'width': percentage + '%'});
+
   $("#intialTime").text(getPresentTime());
   $("#fullTime").text(getTimee());
 }
@@ -78,9 +75,6 @@ setInterval(function () {
   let minute = parseInt((videoo.duration % 3600) / 60);
   let hour = parseInt((videoo.duration) / 3600);
 
-//   if (minute > 0) {
-//     second -= minute * 60;
-//  }
    if (minute<10) {
        minute = "0" + minute;
    }
@@ -98,9 +92,7 @@ if (minute == 60) {
   hour++
   hour = "0" + minute;
 }
-
-
-  let videoDuration=`${hour}:${minute}:${second}`
+ let videoDuration=`${hour}:${minute}:${second}`
 
   $("#timerFullTime").html(videoDuration)
 })
@@ -133,6 +125,7 @@ function getPresentTime() {
 
 $("#play").click(function () {
   videoo.play()
+  body.classList.add("gradient")
   $("#pause").show()
   $(this).hide()
   getTimee()
@@ -160,13 +153,6 @@ function progressLoop() {
             minute = "0" + minute;
         }
 
-//  let total_width=$("#progressbar").width();
-//  $width_inc=total_width/10;
-//  if($("#progressbar").width()<$total_width)
-//  {
-//   $width=$("#progressbar").width()+$width_inc;
-//   $("#progressbar").animate({width:''+$width+''},300);
-//  }
 
 
 
@@ -174,7 +160,6 @@ function progressLoop() {
       document.getElementById("timer").innerHTML= videoPresentTime;
       document.getElementById("timerIntialTime").innerHTML= videoPresentTime;
       console.log(progressValue);
-      // requestAnimationFrame(progressLoop);
     }, 1000)
 
  };
@@ -205,7 +190,6 @@ function  open() {
  let currentID = document.getElementById("intensityBar")
 
  if( currentID.style.display == "none"){
-  // currentID.style.display = "block"
   currentID.fadeIn(1000)
   console.log("yes");
  }else{
@@ -270,7 +254,6 @@ function openFile() {
     $("#instruction1").hide()
   $("#videoCon").show()
     progressLoop()
-    // requestAnimationFrame(progressLoop);
 };
 
 function AddVideo() {

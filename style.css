@@ -33,6 +33,25 @@ color: rgb(254,229,103);
 margin-top: -60px;
 box-shadow: 3px 3px 3px rgb(254,229,103);
 }
+
+.gradient{
+    background: linear-gradient(50deg,rgb(46, 51, 54),rgb(61, 61, 61),rgb(54, 46, 46));
+    animation: tolu 5s ease-in-out infinite;
+    background-size: 600%;
+}
+
+@keyframes tolu{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+}
+
 #container h1{
     text-align: center;
 }
@@ -149,18 +168,15 @@ box-shadow: 3px 3px 3px rgb(254,229,103);
     margin-top: 40px;
     border-radius: 20px;
     display: none;
-    /* background-image: url("img/Screenshot_20210523-004236_Behance.jpg");
-    background-repeat: no-repeat;
-    background-size: cover; */
+   
 }
 
 #bodyy{
-    /* background-image: url("img/20210522_230917.jpg"); */
-    /* background-repeat: no-repeat; */
+
     background-color: rgb(57,68,87);
      background-size: cover; 
     padding-top: 50px;
-    /* height: 1257px; */
+  
     width: 1360px;
     color: beige;
     
@@ -360,51 +376,16 @@ header{
         #ff8a00, yellow
       );
       /* transition: progressMove  width 1s linear; */
-       animation: progressMove 5s linear infinite; 
+       animation: progressMove 1s linear; 
 } 
 
-/* @keyframes progressMove {
-    0%{
-        width: 0%;
-    }
-    100%{
-        width: 100%;
-    }
-} */
 
  
-progress[value]::-webkit-progress-value {
-    background-image: linear-gradient(
-      to right,
-      #ff8a00, #e52e71
-    );
-    transition: width 1s linear;
-  }
-  
-  progress[value]::-moz-progress-bar {
-    background-image: -moz-linear-gradient(
-      right,
-      #ff8a00, #e52e71
-    );
-  }
 
-
-  progress[aria-valuenow] {
-    appearance: none;
-    border: none;
-    border-radius: 3px;
-    box-shadow: 0 2px 3px rgba(0, 0, 0,.25) inset;
-    color: dodgerblue;
-    display: inline;
-    height: 15px;
-    order: 1;
-    position: relative;
-    width: 100%;
-  }
 #intensity{
     height: 100px;
     width: 50px;
-    /* background-color:black; */
+   
      margin-left: auto;
     margin-right: 120px;
     margin-top: 10px;
