@@ -8,16 +8,16 @@ $(document).ready(function (){
   timer          = $('#intialTime'),
   vidDuration    = $('#fullTime'),
   timeState      = $('#time')
-   
+
  $("#pause").hide()
 $('#videoContainer').click(function () {
   $("#videoo").hide()
 })
 $("#addviddiv").click(function () {
-  $("#addvid").click()  
+  $("#addvid").click()
 })
 $("#addviddivv").click(function () {
-  $("#addvidd").click()  
+  $("#addvidd").click()
 })
 // $("#addvid").change(function () {
 //   console.log($("#addvid")[0].files[0])
@@ -32,7 +32,7 @@ $("#addviddivv").click(function () {
     var currentSeconds = Math.round((mousePositionX / width) * videoo.duration);
     var currentMinutes  = Math.floor(currentSeconds/60);
     var currentHour =Math.floor(currentMinutes/60);
-  
+
       if (currentMinutes > 0) {
        currentSeconds -= currentMinutes * 60;
     }
@@ -45,11 +45,11 @@ $("#addviddivv").click(function () {
    if (currentHour.toString().length === 1) {
     currentHour = "0" + currentHour;
 }
-  
-  
+
+
     timer.innerHTML = `${currentHour}:${currentMinutes}:${currentSeconds}`
-    
-  }) 
+
+  })
 })
 
 function skip() {
@@ -58,10 +58,11 @@ function skip() {
       width  =$("#progressbar").outerWidth();
  videoo.currentTime = (mousePositionX / width) * videoo.duration;
  updateplayer();
+
 }
 
 $("#progressbar").click(function () {
-  skip(); 
+  skip();
 });
 
 function updateplayer() {
@@ -83,7 +84,7 @@ setInterval(function () {
    if (minute<10) {
        minute = "0" + minute;
    }
- 
+
   if (second < 10) {
       second = "0" + second;
   }
@@ -98,16 +99,16 @@ if (minute == 60) {
   hour = "0" + minute;
 }
 
- 
+
   let videoDuration=`${hour}:${minute}:${second}`
-  
+
   $("#timerFullTime").html(videoDuration)
 })
 }
 getTimee()
 
 function getPresentTime() {
- 
+
   var second = Math.round(videoo.currentTime);
   var minute  = Math.floor(second / 60);
   var hour =Math.floor(minute / 60);
@@ -125,13 +126,13 @@ function getPresentTime() {
       hour = "0" + hour;
   }
    let videoPresentTime=`${hour}:${minute}:${second}`
-  
+
    $("#timerIntialTime").html(videoPresentTime)
 
 }
 
 $("#play").click(function () {
-  videoo.play();
+  videoo.play()
   $("#pause").show()
   $(this).hide()
   getTimee()
@@ -143,39 +144,41 @@ const timer = document.getElementById("timer");
 
 function progressLoop() {
    setInterval(function () {
-   
-    //  let progressValue = Math.round((videoo.currentTime/videoo.duration) * 100);
-    //   var second = Math.round(videoo.currentTime)
-    //   var minute  = Math.floor(second / 60);
-    
-    //    if (minute > 0) {
-    //      second -= minute * 60;
-    //   }
-    //    if (second.toString().length === 1) {
-    //        second = "0" + second;
-    //     }
-    //     if (minute.toString().length === 1) {
-    //         minute = "0" + minute;
-    //     }
 
- $total_width=$("#progressbar_wrapper").width();
- $width_inc=$total_width/10;
- if($("#progressbar").width()<$total_width)
- {
-  $width=$("#progressbar").width()+$width_inc;
-  $("#progressbar").animate({width:''+$width+''},300);
- }
+     let progressValue = Math.round((videoo.currentTime/videoo.duration) * 100);
+     document.getElementById('progress').style.width = `${progressValue}%`
+      var second = Math.round(videoo.currentTime)
+      var minute  = Math.floor(second / 60);
+
+       if (minute > 0) {
+         second -= minute * 60;
+      }
+       if (second.toString().length === 1) {
+           second = "0" + second;
+        }
+        if (minute.toString().length === 1) {
+            minute = "0" + minute;
+        }
+
+//  let total_width=$("#progressbar").width();
+//  $width_inc=total_width/10;
+//  if($("#progressbar").width()<$total_width)
+//  {
+//   $width=$("#progressbar").width()+$width_inc;
+//   $("#progressbar").animate({width:''+$width+''},300);
+//  }
 
 
 
        let videoPresentTime=`${minute}:${second}`
-      document.getElementById("timer").innerHTML= videoPresentTime; 
-      document.getElementById("timerIntialTime").innerHTML= videoPresentTime; 
-      requestAnimationFrame(progressLoop);
-    })
-   
+      document.getElementById("timer").innerHTML= videoPresentTime;
+      document.getElementById("timerIntialTime").innerHTML= videoPresentTime;
+      console.log(progressValue);
+      // requestAnimationFrame(progressLoop);
+    }, 1000)
+
  };
- 
+
  function reset_progressbar()
 {
  $("#progress").animate({width:'0px'},300);
@@ -196,9 +199,23 @@ $("#pause").click(function () {
 })
 
 
-$("#volumeImg").click(function () {
-  $("#intensityBar").fadeIn(1000)
-})
+volumeImg.addEventListener("click", open)
+
+function  open() {
+ let currentID = document.getElementById("intensityBar")
+
+ if( currentID.style.display == "none"){
+  // currentID.style.display = "block"
+  currentID.fadeIn(1000)
+  console.log("yes");
+ }else{
+  currentID.fadeOut(1000)
+  console.log("no");
+ }
+}
+
+
+
 
 function disappear() {
   $("#addviddivv").hide()
@@ -213,7 +230,7 @@ function setVolume() {
   var rangge = document.getElementById("intensity").value;
   videoo.volume = rangge /100;
   let volumee= videoo.volume * 100
-  volumeNo.innerHTML= volumee 
+  volumeNo.innerHTML= volumee
   console.log(volumee)
 }
 
@@ -247,7 +264,7 @@ function openFile() {
       var videooutput = document.getElementById('videoo');
       videooutput.src = dataURL;
     };
-    var addVideo= document.getElementById("addvidd");   
+    var addVideo= document.getElementById("addvidd");
     reader.readAsDataURL(addVideo.files[0]);
     $("#addviddivv").hide()
     $("#instruction1").hide()
@@ -257,16 +274,16 @@ function openFile() {
 };
 
 function AddVideo() {
- 
-    for (let index = 0; index < videoArray.length; index++) { 
+
+    for (let index = 0; index < videoArray.length; index++) {
 
       console.log(videoArray);
-      tbodyy.innerHTML+= ` 
+      tbodyy.innerHTML+= `
        <tr>
-        <td onClick="playVideo(${index})"> ${videoArray[index].name}</td>   
+        <td onClick="playVideo(${index})"> ${videoArray[index].name}</td>
         <td><button onClick="deletee(${index})" class="fa fa-dustbin btn btn-light"> Delete Video</button></td>
         </tr>
-      `   
+      `
    }
  }
 
@@ -280,32 +297,31 @@ function AddVideo() {
     videooutput.src = dataURL;
     console.log(dataURL)
   };
-  
+
   reader.readAsDataURL(videoArray[index]);
  }
 
 
-   function deletee(index) { 
+   function deletee(index) {
     videoArray.splice(index, 1);
     tbodyy.innerHTML="";
     AddVideo();
       console.log(videoArray);
     }
-    
-        
+
+
     //  function saveTodo() {
     //     localStorage.setItem("todos",(videoArray))
     //   alert("onunload")
     //    console.log(videoArray);
     //  }
-     
+
     // function getTodo() {
     //      videoArray=JSON.parse(localStorage.getItem("todos"));
     //      AddVideo()
     //     alert("onload")
     //    console.log(videoArray);
     // }
-   
 
-   
- 
+
+
