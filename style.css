@@ -351,10 +351,26 @@ header{
         to right,
         #ff8a00, yellow
       );
-      border-radius: 3px;
-      position: relative;
-      transition: width 1s linear;
+    border-radius: 3px;
+    position: relative;
+    transition: width 1s linear;
     }
+
+ 
+progress[value]::-webkit-progress-value {
+    background-image: linear-gradient(
+      to right,
+      #ff8a00, #e52e71
+    );
+    transition: width 1s linear;
+  }
+  
+  progress[value]::-moz-progress-bar {
+    background-image: -moz-linear-gradient(
+      right,
+      #ff8a00, #e52e71
+    );
+  }
 
 
   progress[aria-valuenow] {

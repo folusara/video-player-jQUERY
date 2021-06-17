@@ -73,26 +73,29 @@ function updateplayer() {
 
 function getTimee() {
 setInterval(function () {
-  let hour = parseInt((videoo.duration) / 3600);
-  if (hour>10) {
-      hour = "0" + hour;
-  }
-  let minute = parseInt((videoo.duration % 3600) / 60);
-  if (minute>10) {
-      minute = "0" + minute;
-  }
   let second = Math.ceil(videoo.duration % 60);
+  let minute = parseInt((videoo.duration % 3600) / 60);
+  let hour = parseInt((videoo.duration) / 3600);
+
+  if (minute > 0) {
+    second = minute * 59;
+ }
+   if (minute>10) {
+       minute = "0" + minute;
+   }
   if (second<10) {
       second = "0" + second;
   }
-  if (hour.toString().length === 1) {
+  if (hour>10) {
     hour = "0" + hour;
 }
+ 
   let videoDuration=`${hour}:${minute}:${second}`
   
   $("#timerFullTime").html(videoDuration)
 })
 }
+getTimee()
 
 function getPresentTime() {
  
@@ -132,7 +135,7 @@ const timer = document.getElementById("timer");
 function progressLoop() {
    setInterval(function () {
    
-      progressValue = Math.round((videoo.currentTime/videoo.duration) * 100);
+     let progressValue = Math.round((videoo.currentTime/videoo.duration) * 100);
       var second = Math.round(videoo.currentTime)
       var minute  = Math.floor(second / 60);
     
@@ -147,6 +150,7 @@ function progressLoop() {
         }
        let videoPresentTime=`${minute}:${second}`
       document.getElementById("timer").innerHTML= videoPresentTime; 
+      document.getElementById("timerIntialTime").innerHTML= videoPresentTime; 
       requestAnimationFrame(progressLoop);
     })
    
@@ -224,7 +228,7 @@ function openFile() {
     $("#instruction1").hide()
   $("#videoCon").show()
     progressLoop()
-    requestAnimationFrame(progressLoop);
+    // requestAnimationFrame(progressLoop);
 };
 
 function AddVideo() {
