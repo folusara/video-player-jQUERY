@@ -470,14 +470,14 @@ header{
     }
 
     #volumeImg{
-        margin-left: 3750%;
+        margin-left: 3770%;
         margin-top: 12px;
         position: absolute;
         cursor: pointer;
     }
     #scaleup{
         margin-left: 2090%;
-      margin-top: 14px;
+      margin-top: -260px;
         font-size: small;
         cursor: pointer;
         color:wheat
