@@ -35,7 +35,7 @@ box-shadow: 3px 3px 3px rgb(254,229,103);
 }
 
 .gradient{
-    background: linear-gradient(50deg,rgb(122, 150, 206),rgb(96, 118, 163),rgb(88, 106, 141),rgb(47, 58, 78),rgb(57,68,87),rgb(57,68,87));
+    background: linear-gradient(10deg, rgb(67, 90, 134),rgb(55, 70, 99),rgb(27, 34, 48),rgb(88, 106, 141),rgb(47, 58, 78),rgb(57,68,87),rgb(57,68,87));
     animation: tolu 5s ease-in-out infinite;
     background-size: 200%;
 }
@@ -287,7 +287,7 @@ header{
 
 #volumeImg{
     /* display: block; */
-    margin-left: 55%;
+    margin-left: 54%;
     margin-top: -25px;
     color: wheat;
     cursor: pointer;
@@ -296,7 +296,7 @@ header{
 }
 
 #scaleup{
-    margin-left: 58.5%;
+    margin-left: 57.5%;
     margin-top:-11px;
     font-size: small;
     cursor: pointer;
@@ -319,7 +319,7 @@ header{
     margin-right: 10px;
     cursor: pointer;
 
-    color: red;
+    color: wheat;
     transform: rotate(180deg);
 }
 
@@ -334,7 +334,7 @@ header{
     cursor: pointer;
     margin-left: 10px;
     margin-top: 500%;
-    color: red;
+    color: wheat;
 }
 #ProgressContainer{
     margin-left: 20px;

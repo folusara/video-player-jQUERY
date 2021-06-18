@@ -129,7 +129,9 @@ $("#play").click(function () {
   $(this).hide()
   getTimee()
   left.classList.add("gradient")
- $("#right").width("1050px").height("600px").marginTop("200px")
+  right.classList.add("gradient")
+ $("#right").width("1050px").height("650px").css({"marginTop":"-48px"})
+ $("#videoo").css({"marginTop":"100px"})
 })
 
 
@@ -137,6 +139,7 @@ $("#play").click(function () {
 $("#pause").click(function () {
   videoo.pause()
   left.classList.remove("gradient")
+  right.classList.remove("gradient")
   $(this).hide()
   $("#play").show()
 })
