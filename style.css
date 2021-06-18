@@ -34,10 +34,11 @@ margin-top: -60px;
 box-shadow: 3px 3px 3px rgb(254,229,103);
 }
 
+
 .gradient{
-    background: linear-gradient(10deg, rgb(67, 90, 134),rgb(55, 70, 99),rgb(27, 34, 48),rgb(88, 106, 141),rgb(47, 58, 78),rgb(57,68,87),rgb(57,68,87));
-    animation: tolu 5s ease-in-out infinite;
-    background-size: 200%;
+    background: radial-gradient(circle, rgb(67, 90, 134),rgb(55, 70, 99),rgb(27, 34, 48),rgb(88, 106, 141),rgb(47, 58, 78),rgb(57,68,87),rgb(57,68,87));
+    animation: tolu 10s infinite;
+    background-size: 60%;
 }
 
 @keyframes tolu{
@@ -51,12 +52,22 @@ box-shadow: 3px 3px 3px rgb(254,229,103);
         background-position: 0% 50%;
     }
 }
+#modal{
+    display: none;
+    margin-top: 200px;
+}
 
+#modal > ::after{
+    display: none;
+}
+#modal > ::before{
+    display: none;
+}
 #container h1{
     text-align: center;
 }
 
- ::before{
+ /* ::before{
     content: "";
     width: 15%;
     height: 30%;
@@ -89,7 +100,7 @@ box-shadow: 3px 3px 3px rgb(254,229,103);
     bottom: 0%;
     right: 0%;
     border-radius: 0 0 5000%  0%;
-}  
+}   */
 
 
 #videoContainer #controls .ProgressContainer {
@@ -315,12 +326,12 @@ header{
 #play{
    font-size: small;
     margin-left: 10px;
-    margin-top: 5px;
+    margin-top: 58px;
     margin-right: 10px;
     cursor: pointer;
 
     color: wheat;
-    transform: rotate(180deg);
+  
 }
 
 #playdiv{
@@ -333,7 +344,7 @@ header{
     font-size: small;
     cursor: pointer;
     margin-left: 10px;
-    margin-top: 500%;
+    margin-top: 280%;
     color: wheat;
 }
 #ProgressContainer{

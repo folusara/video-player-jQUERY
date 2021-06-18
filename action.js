@@ -128,7 +128,7 @@ $("#play").click(function () {
   $("#pause").show()
   $(this).hide()
   getTimee()
-  left.classList.add("gradient")
+  
   right.classList.add("gradient")
  $("#right").width("1050px").height("650px").css({"marginTop":"-48px"})
  $("#videoo").css({"marginTop":"100px"})
@@ -138,7 +138,7 @@ $("#play").click(function () {
 
 $("#pause").click(function () {
   videoo.pause()
-  left.classList.remove("gradient")
+ 
   right.classList.remove("gradient")
   $(this).hide()
   $("#play").show()
@@ -228,11 +228,14 @@ function setVolume() {
 
 
 
-
+function modalclose() {
+  $("#modal").fadeOut(1000)
+}
 
 function addTitle() {
-  if ($("#addvid")[0].files[0].type !="video/mp4"  ) {
-    alert("wrong file")
+  if ($("#addvid")[0].files[0].type !="video/mp4"   ) {
+    $("#modal").fadeIn(1000)
+
     return
   }
   addVideo = document.getElementById("addvid").files[0];
@@ -247,7 +250,7 @@ console.log(document.getElementById("addvid").files[0].name)
 
 function openFile() {
   if ($("#addvidd")[0].files[0].type !="video/mp4" ) {
-    alert("wrong file")
+    $("#modal").fadeIn(1000)
     return
   }
     var reader = new FileReader();
