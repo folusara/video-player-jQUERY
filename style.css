@@ -35,9 +35,9 @@ box-shadow: 3px 3px 3px rgb(254,229,103);
 }
 
 .gradient{
-    background: linear-gradient(50deg,rgb(46, 51, 54),rgb(61, 61, 61),rgb(54, 46, 46));
+    background: linear-gradient(50deg,rgb(122, 150, 206),rgb(96, 118, 163),rgb(88, 106, 141),rgb(47, 58, 78),rgb(57,68,87),rgb(57,68,87));
     animation: tolu 5s ease-in-out infinite;
-    background-size: 600%;
+    background-size: 200%;
 }
 
 @keyframes tolu{
@@ -225,6 +225,7 @@ td{
     border-radius: 1000px;
     background-color: rgb(254,229,103);
     padding: 50px;
+     z-index: 1;
 }
 #instruction1{
     margin-left: 145%;
@@ -286,11 +287,12 @@ header{
 
 #volumeImg{
     /* display: block; */
-    margin-left: 56.5%;
-    margin-top: -10px;
+    margin-left: 55%;
+    margin-top: -25px;
     color: wheat;
     cursor: pointer;
     position: absolute;
+    transform: rotate(180deg);
 }
 
 #scaleup{
@@ -311,17 +313,28 @@ header{
 }
 
 #play{
-   font-size: xx-small;
+   font-size: small;
     margin-left: 10px;
     margin-top: 5px;
+    margin-right: 10px;
     cursor: pointer;
+
+    color: red;
+    transform: rotate(180deg);
+}
+
+#playdiv{
+    margin-top: -45px;
+    display: flex;
+    flex-direction: row;
 }
 
 #pause{
-    font-size: xx-small;
+    font-size: small;
     cursor: pointer;
     margin-left: 10px;
-    margin-top: 5px;
+    margin-top: 500%;
+    color: red;
 }
 #ProgressContainer{
     margin-left: 20px;
@@ -566,6 +579,11 @@ margin-top: 23px;
         margin-top: 4px;
         cursor: pointer;
         font-size: xx-small;
+    }
+
+    #playspan{
+        margin-top: 3000%;
+        transform: rotate(180deg);
     }
 
 

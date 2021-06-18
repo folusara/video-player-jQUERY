@@ -125,11 +125,22 @@ function getPresentTime() {
 
 $("#play").click(function () {
   videoo.play()
-  body.classList.add("gradient")
   $("#pause").show()
   $(this).hide()
   getTimee()
+  left.classList.add("gradient")
+ $("#right").width("1050px").height("600px").marginTop("200px")
 })
+
+
+
+$("#pause").click(function () {
+  videoo.pause()
+  left.classList.remove("gradient")
+  $(this).hide()
+  $("#play").show()
+})
+
 
 let progress = document.getElementById("progress");
 const timer = document.getElementById("timer");
@@ -159,7 +170,7 @@ function progressLoop() {
        let videoPresentTime=`${minute}:${second}`
       document.getElementById("timer").innerHTML= videoPresentTime;
       document.getElementById("timerIntialTime").innerHTML= videoPresentTime;
-      console.log(progressValue);
+     
     }, 1000)
 
  };
@@ -177,23 +188,17 @@ $("#scaleup").click(function () {
 })
 
 
-$("#pause").click(function () {
-  videoo.pause()
-  $(this).hide()
-  $("#play").show()
-})
-
-
 volumeImg.addEventListener("click", open)
 
 function  open() {
  let currentID = document.getElementById("intensityBar")
 
  if( currentID.style.display == "none"){
-  currentID.fadeIn(1000)
+  currentID.style.display ="block";
   console.log("yes");
  }else{
-  currentID.fadeOut(1000)
+  currentID.style.display ="none";
+  
   console.log("no");
  }
 }

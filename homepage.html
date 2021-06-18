@@ -71,45 +71,43 @@
                                         </video>
                                 
                                         <div id="controldiv" >
-                                            <div>
-                                                <span class=" btn bg-success fa fa-play"   id="play"></span>
-                                                <button class="btn bg-warning fa fa-pause"  id="pause" ></button>
+                                            <div id="playdiv">
+                                                <span class="fa fa-pause"   id="pause" ></span>
+                                                <span class="fa fa-play"  id="play"></span>
+                                                </span>  
                                             </div>
-                                        
-
-                                    
-                                        <div id="ProgressContainer "  >
-                                            <div id="timerIntialTime">
-                                                00:00
-                                            </div>
- 
-                                            <div id="progressbar" class="progressbar">
-                                                <div class="progress-bar progress-bar-success" role="progressbar" id="progress" value=""
-                                                 max="100"  >
-                                                        <span id="timer">
-                                                            00:00:00
-                                                        </span> 
-                                                    </div>   
-                                             
-                                               
+                                            <div id="ProgressContainer "  >
+                                                <div id="timerIntialTime">
+                                                        00:00
                                                 </div>
-                                            </div>                               
-                                            <div id="timerFullTime">
-                                                    00:00:00
+        
+                                                <div id="progressbar" class="progressbar">
+                                                    <div class="progress-bar progress-bar-success" role="progressbar" id="progress" value=""
+                                                        max="100"  >
+                                                            <span id="timer">
+                                                                    00:00:00
+                                                            </span> 
+                                                    </div>   
+                                                    
+                                                    
+                                                        </div>
+                                                    </div>                               
+                                                    <div id="timerFullTime">
+                                                            00:00:00
+                                                    </div>
+                                                </div>
+                                            <div id="intensityBar" class="intensityBar">
+                                                    <input id="intensity" type="range" onchange="setVolume()">
+                                                    <div id="volumeNo"></div>
+                                            </div>    
+                                                
+                                            <div id="volume">
+                                            
+                                                <span  id="volumeImg" class="fa fa-volume-up"></span>
+                                                <span id="scaleup" class="fa fa-expand-arrows-alt"> </span>
+                                                
                                             </div>
                                         </div>
-                                        <div id="intensityBar" class="intensityBar">
-                                            <input id="intensity" type="range" onchange="setVolume()">
-                                            <div id="volumeNo"></div>
-                                        </div>    
-                                        
-                                        <div id="volume">
-                                     
-                                          <span  id="volumeImg" class="fa fa-volume-up"></span>
-                                      <span id="scaleup" class="fa fa-expand-arrows-alt"> </span>
-                                        </div>
-                                    </div>
-                                </div>
 
                        </div>
               
